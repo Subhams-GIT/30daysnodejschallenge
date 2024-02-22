@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+   <h1>"WELCOME TO 30DAYSNODEJS CHALLENGE"</h1> 
+   <input type="text" placeholder="type something in this box ">
+   <button>send</button>
+   <link rel="stylesheet" href="style.css">
+   <script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+  const input=document.getElementsByTagName('input')[0]
+  const send=document.getElementsByTagName('button')[0]
+  send.addEventListener('click',(e)=>{
+    const messege=input.value
+    console.log(messege);
+    socket.emit('messege'+ messege)
+  })
+  
+</script>
+</body>
+</html>

@@ -3,7 +3,7 @@ const app=express();
 import mongoose from 'mongoose'
 const port= 3000;
 app.use(express.json())
-const connection_string='mongodb+srv://admin:1wBbD6m8brGWP1jM@cluster0.jhhmwud.mongodb.net/products'
+const connection_string='mongodb+srv://admin:@cluster0.jhhmwud.mongodb.net/products'
 mongoose.connect(connection_string);
 const pro_Schema= mongoose.Schema({
 	name:String,

@@ -12,7 +12,7 @@ const User=mongoose.model("user",UserSchema);
 function connectoDb(req,res,next){
     const username=req.body.username;
     const email=req.body.email;
-        const connectionString='mongodb+srv://admin:1wBbD6m8brGWP1jM@cluster0.jhhmwud.mongodb.net/newusers'
+        const connectionString='mongodb+srv://admin:@cluster0.jhhmwud.mongodb.net/newusers'
         mongoose.connect(connectionString)
         const newuser=new User({
             username,

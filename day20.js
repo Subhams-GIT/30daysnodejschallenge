@@ -8,7 +8,7 @@ const UserSchema=mongoose.Schema({
     age:Number
 })
 const User=mongoose.model("user",UserSchema);
-const connectionString='mongodb+srv://admin:1wBbD6m8brGWP1jM@cluster0.jhhmwud.mongodb.net/usersdata'
+const connectionString='mongodb+srv://admin:@cluster0.jhhmwud.mongodb.net/usersdata'
 mongoose.connect(connectionString)
 app.post("/users", async (req,res)=>{
     const username=req.body.username;

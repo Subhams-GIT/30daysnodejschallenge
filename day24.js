@@ -6,16 +6,11 @@ app.use(express.json())
 const connection_string='mongodb+srv://admin:1wBbD6m8brGWP1jM@cluster0.jhhmwud.mongodb.net/products'
 mongoose.connect(connection_string);
 
-const category_schema=mongoose.Schema({
-	name:String
-});
-const category=mongoose.mondel('category',category_schema);
 const pro_Schema= mongoose.Schema({
 	name:String,
 	price:Number,
 	quantity:Number,
 	id:Number,
-	typeOfProduct: { type: Schema.Types.ObjectId, ref: 'category' }
 });
 const product_details=mongoose.model('productSchema',pro_Schema);
 
